@@ -13,20 +13,20 @@ header, footer {
 
 /* Estilos para la navegación */
 nav ul {
-    display: flex;             /* Activa el modo flexible */
+    display: flex;             /* Esto activa el modo flexible */
     justify-content: center;   /* Centra los elementos horizontalmente */
-    list-style: none;          /* Asegura que no haya puntos */
-    padding: 0;                /* Quita el espacio extra de la izquierda */
+    list-style: none;          /* Esto quita los puntos que da por default cuando escribes una lista (li) */
+    padding: 0;                /* Con esto se quita el espacio extra de la izquierda */
     margin: 0;                 /* Quita márgenes por defecto */
-    background-color: #38442c; /* El verde oscuro de tu imagen */
+    background-color: #38442c; /* Color verde oscuro de la imagen */
 }
 
 nav li {
-    margin: 0 15px;            /* Da espacio lateral entre cada botón */
+    margin: 0 15px;            /* Para poner espacio lateral entre cada botón del navegador li */
 }
 
 nav li a {
-    text-decoration: none;     /* Quita el subrayado */
+    text-decoration: none;     /* Para quitar el subrayado */
     color: white;              /* Color del texto */
     display: block;
     padding: 10px 0;           /* Espacio arriba y abajo de los textos */
@@ -50,7 +50,7 @@ main {
 }
 
 .lista-autores li {
-    padding: 1px 0;        /* Espaciado entre nombres */
+    padding: 1px 0;        /* Espaciado entre nombres de la lista de autores */
     font-family: Arial, sans-serif;
     color: #333;
     margin-bottom: 2px;
@@ -85,3 +85,36 @@ footer .lista-autores {
     font-family: Arial, sans-serif;
     color: #333;
 }
+
+/* Espacio de vacío */
+.vacio {
+    height: 15vh; /* Ocupa el 60% de la altura de la ventana del navegador */
+    width: 100%;
+}
+
+/* Parte que parezca un documento aparte */
+.archivo-contenedor {
+    border-top: 1px solid #1a1a1a; /* Una línea casi invisible para marcar el inicio */
+    padding-top: 80px;
+    margin-top: 20px;
+}
+
+/* Estilo para la frase en cursivas */
+.puente {
+    font-style: italic;
+    text-align: center;
+    color: #666; /* Un gris más oscuro para que se vea diferente al resto del texto */
+    margin-bottom: 100px;
+    font-size: 1.1em;
+}
+
+.fotodehadas {
+    width: 15%;
+    height: auto;
+}
+
+.fotodecueva {
+    width: 25%;
+    height: auto;
+}
+
