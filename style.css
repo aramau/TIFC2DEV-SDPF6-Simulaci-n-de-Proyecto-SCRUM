@@ -1,0 +1,87 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Estilos para el encabezado y pie de página */
+header, footer {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos para la navegación */
+nav ul {
+    display: flex;             /* Activa el modo flexible */
+    justify-content: center;   /* Centra los elementos horizontalmente */
+    list-style: none;          /* Asegura que no haya puntos */
+    padding: 0;                /* Quita el espacio extra de la izquierda */
+    margin: 0;                 /* Quita márgenes por defecto */
+    background-color: #38442c; /* El verde oscuro de tu imagen */
+}
+
+nav li {
+    margin: 0 15px;            /* Da espacio lateral entre cada botón */
+}
+
+nav li a {
+    text-decoration: none;     /* Quita el subrayado */
+    color: white;              /* Color del texto */
+    display: block;
+    padding: 10px 0;           /* Espacio arriba y abajo de los textos */
+}
+
+nav li a:hover {
+    background-color: #333;
+}
+
+/* Estilos para el área de contenido principal */
+main {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.lista-autores {
+    list-style-type: none;
+    padding: 0;            
+    margin: 5px 0;     
+}
+
+.lista-autores li {
+    padding: 1px 0;        /* Espaciado entre nombres */
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+footer {
+    padding: 20px 0;          
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;         
+}
+
+footer p, 
+footer ul,
+footer .lista-autores {
+    margin: 5px 0;            
+}
+
+.imageninicio {
+    width: 45%;
+    height: auto;
+}
+
+.lista-correos {
+    list-style-type: none;
+    padding: 0;
+    margin-top: -13px;
+}
+
+.lista-correos li {
+    padding: 2px 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
