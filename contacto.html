@@ -1,20 +1,51 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Contacto</title>
-</head>
-<body>
-    <img class="fotodecueva" src="pictures/cueva.jpeg" alt="Imagen de una cueva">
-    <h2>Envía tus palabras a la cueva, nosotras sabremos recoger el eco</h2>
-    <p>Nuestro teléfono: 5512345333.</p>
-    <p>Para whatsapp: 5512345777.</p>
-    <p>Nuestros correos:</p>
-    <ul class="lista-correos">
-        <li>777@sociedadsecretadelashadas.com</li>
-        <li>gatilde@sociedadsecretadelashadas.com</li>
-        <li>tita@sociedadsecretadelashadas.com</li>
-    </ul>
-    
-</body>
-</html>
+<div class="container-fluid py-5">
+    <div class="row justify-content-center">
+        
+        <div class="col-md-2 d-none d-md-block"></div>
+
+        <div class="col-md-8 bg-white p-5 shadow-sm rounded-4 border-top border-5 border-cafe">
+            
+            <div class="text-center mb-5">
+                <img src="pictures/cueva.jpeg" class="img-fluid rounded shadow-sm mb-4 border border-3 border-verde-oscuro" alt="Imagen de una cueva" style="max-height: 250px; width: 100%; object-fit: cover;">
+                <h2 class="text-cafe">Envía tus palabras a la cueva...</h2>
+                <p class="fst-italic text-muted">Nosotras sabremos recoger el eco.</p>
+            </div>
+
+            <div id="liveAlertPlaceholder" class="mb-4"></div>
+
+            <div class="row g-4 justify-content-between">
+                
+                <div class="col-md-4 border-end pe-4">
+                    <h5 class="text-verde mb-3 fw-bold">Canales del Bosque</h5>
+                    <p class="small mb-1"><strong>Teléfono:</strong><br> 5512345333</p>
+                    <p class="small"><strong>WhatsApp:</strong><br> 5512345777</p>
+                    <hr>
+                    <h6 class="small fw-bold">Correos de la Sociedad:</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2 text-break">✦ 777@sociedadsecretadelashadas.com</li>
+                        <li class="mb-2 text-break">✦ gatilde@sociedadsecretadelashadas.com</li>
+                        <li class="mb-2 text-break">✦ tita@sociedadsecretadelashadas.com</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-7">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label text-cafe fw-bold small">Tu correo electrónico</label>
+                            <input type="email" class="form-control border-secondary-subtle" id="emailInput" placeholder="nombre@ejemplo.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="messageInput" class="form-label text-cafe fw-bold small">Tu mensaje</label>
+                            <textarea class="form-control border-secondary-subtle" id="messageInput" rows="5" placeholder="Escribe aquí lo que el viento te ha susurrado..." required></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-verde-oscuro text-white py-2 shadow-sm">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2 d-none d-md-block"></div>
+    </div>
+</div>
