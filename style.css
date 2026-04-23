@@ -1,120 +1,126 @@
-/* Estilos generales */
+/* 1. Tarea 2. Paleta de Colores Personalizada */
+:root {
+    --negro-bosque: #0a140a;      /* Fondo de la página (Verde bosque) */
+    --gris-ceniza-claro: #e0e0e0; /* Cajas: Gris claro (Como ceniza) */
+    --verde-mistico: #2d5a2d;    /* Acentos y detalles */
+    --texto-oscuro: #1a1a1a;     /* Texto dentro de las cajas claras */
+    --blanco-suave: #fafafa;     /* Solo para textos sobre fondo oscuro */
+}
+
+/*2. Tarea 3. Estilos Base*/
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    background-color: var(--negro-bosque);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--blanco-suave); /* Texto que esté fuera de las cajas claras */
+    margin: 0;
+    padding: 0;
 }
 
-/* Estilos para el encabezado y pie de página */
-header, footer {
-    background-color: #f0f0f0;
-    padding: 10px;
-    text-align: center;
+/* Para los títulos principales */
+h2, h3, h4 {
+    color: var(--verde-mistico);
+    font-weight: bold;
 }
 
-/* Estilos para la navegación */
-nav ul {
-    display: flex;             /* Esto activa el modo flexible */
-    justify-content: center;   /* Centra los elementos horizontalmente */
-    list-style: none;          /* Esto quita los puntos que da por default cuando escribes una lista (li) */
-    padding: 0;                /* Con esto se quita el espacio extra de la izquierda */
-    margin: 0;                 /* Quita márgenes por defecto */
-    background-color: #38442c; /* Color verde oscuro de la imagen */
+/* 3. Refactorización de Componentes */
+
+/* Header con fondo de un bosque oscuro */
+header.header-bosque {
+    background: linear-gradient(rgba(10, 20, 10, 0.85), rgba(10, 20, 10, 0.85)), 
+                url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 3px solid var(--verde-mistico);
 }
 
-nav li {
-    margin: 0 15px;            /* Para poner espacio lateral entre cada botón del navegador li */
+/* La navbar adaptada al fondo oscuro*/
+.bg-verde-oscuro {
+    background-color: #050a05 !important;
 }
 
-nav li a {
-    text-decoration: none;     /* Para quitar el subrayado */
-    color: white;              /* Color del texto */
-    display: block;
-    padding: 10px 0;           /* Espacio arriba y abajo de los textos */
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--gris-ceniza-claro) !important;
 }
 
-nav li a:hover {
-    background-color: #333;
+.navbar-dark .navbar-nav .nav-link.active {
+    background-color: var(--verde-mistico);
+    border-radius: 5px;
 }
 
-/* Estilos para el área de contenido principal */
-main {
-    padding: 20px;
-    border: 1px solid #ccc;
-    margin-top: 20px;
+/* 4. Tarea 7*/
+
+/* Esto es para usar el gris ceniza claro en lugar de blanco */
+#content .bg-white, 
+.col-md-8.bg-white,
+.card.bg-white {
+    background-color: var(--gris-ceniza-claro) !important; 
+    color: var(--texto-oscuro) !important; /* Texto oscuro para que así sea más fácil de leer */
+    padding: 40px !important;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra suave para dar profundidad */
 }
 
-.lista-autores {
-    list-style-type: none;
-    padding: 0;            
-    margin: 5px 0;     
+/* Para que todos los textos dentro de las cajas claras sean oscuros */
+#content p, 
+#content li, 
+#content blockquote,
+#content h2, 
+#content h3, 
+#content h4,
+#content label,
+#content span,
+#content div {
+    color: var(--texto-oscuro) !important;
+}
+
+/* Ajuste para los diálogos */
+.border-cafe, .border-start {
+    border-color: var(--verde-mistico) !important;
+}
+
+/* Estilo de las imágenes responsivas */
+.img-fluid {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* 5. Tarea 4. Cambios en el footer*/
+footer {
+    background-color: #050a05;
+    color: #a0a0a0;
+    padding: 50px 0;
+    border-top: 1px solid var(--verde-mistico);
 }
 
 .lista-autores li {
-    padding: 1px 0;        /* Espaciado entre nombres de la lista de autores */
-    font-family: Arial, sans-serif;
-    color: #333;
-    margin-bottom: 2px;
+    color: var(--gris-ceniza-claro);
 }
 
-footer {
-    padding: 20px 0;          
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 14px;         
+/* Ajustes para el formulario de contacto */
+.form-control {
+    background-color: #ffffff !important; /* Fondo blanco para los inputs */
+    border: 1px solid #ced4da;
+    color: #000000 !important; /* Letras negras al escribir */
 }
 
-footer p, 
-footer ul,
-footer .lista-autores {
-    margin: 5px 0;            
+.form-control:focus {
+    border-color: var(--verde-mistico);
+    box-shadow: 0 0 0 0.2rem rgba(45, 90, 45, 0.25);
 }
 
-.imageninicio {
-    width: 45%;
-    height: auto;
+.btn-verde-oscuro {
+    background-color: var(--verde-mistico);
+    color: #ffffff;
+    border: none;
 }
 
-.lista-correos {
-    list-style-type: none;
-    padding: 0;
-    margin-top: -13px;
+.btn-verde-oscuro:hover {
+    background-color: #244924;
+    color: #ffffff;
 }
 
-.lista-correos li {
-    padding: 2px 0;
-    font-family: Arial, sans-serif;
-    color: #333;
-}
-
-/* Espacio de vacío */
+/* Espacio decorativo al final */
 .vacio {
-    height: 15vh; /* Ocupa el 60% de la altura de la ventana del navegador */
+    height: 8vh;
     width: 100%;
 }
-
-/* Parte que parezca un documento aparte */
-.archivo-contenedor {
-    border-top: 1px solid #1a1a1a; /* Una línea casi invisible para marcar el inicio */
-    padding-top: 80px;
-    margin-top: 20px;
-}
-
-/* Estilo para la frase en cursivas */
-.puente {
-    font-style: italic;
-    text-align: center;
-    color: #666; /* Un gris más oscuro para que se vea diferente al resto del texto */
-    margin-bottom: 100px;
-    font-size: 1.1em;
-}
-
-.fotodehadas {
-    width: 15%;
-    height: auto;
-}
-
-.fotodecueva {
-    width: 25%;
-    height: auto;
-}
-
